@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lyman="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ly.customscaleview.ScrollScaleView
+        android:id="@+id/scrollScaleView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        lyman:scaleViewHeight="36dp"
+        lyman:scaleViewLenth="1000"
+        lyman:scaleViewScaleNum="10"
+        lyman:scaleViewLineColor="@color/colorPrimary"
+
+        lyman:scaleViewLineHeight="2dp"
+        lyman:scaleViewScaleHeight="5dp"
+        lyman:scaleViewScaleWidth="2dp"
+
+        lyman:scaleViewPointerColor="@color/scroll_scaleView_green"
+        lyman:scaleViewPointerWidth="4dp"
+        />
+
+    <EditText
+        android:id="@+id/edtNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="定位"
+        />
+</LinearLayout>

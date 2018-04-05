@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="scroll_scaleView_red">#FF4081</color>
+    <color name="scroll_scaleView_green">#21DF13</color>
+</resources>

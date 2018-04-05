@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--刻度尺在屏幕上显示的宽度-->
+    <!--<attr name="scaleViewWidth" format="dimension|reference"/>-->
+    <!--刻度尺的总长度-->
+    <attr name="scaleViewLenth" format="integer|reference"/>
+    <!--刻度尺刻度宽度-->
+    <attr name="scaleViewScaleWidth" format="dimension|reference"/>
+    <!--刻度尺指针宽度-->
+    <attr name="scaleViewPointerWidth" format="dimension|reference"/>
+    <!--刻度尺刻度颜色-->
+    <attr name="scaleViewScaleColor" format="color|reference"/>
+    <!--刻度尺刻度数-->
+    <attr name="scaleViewScaleNum" format="integer|reference"/>
+    <!--刻度尺指针颜色-->
+    <attr name="scaleViewPointerColor" format="color|reference"/>
+    <!--刻度尺直线的颜色-->
+    <attr name="scaleViewLineColor" format="color|reference"/>
+    <!--刻度尺直线的高度-->
+    <attr name="scaleViewLineHeight" format="dimension|reference"/>
+    <!--刻度尺整个高度-->
+    <attr name="scaleViewHeight" format="dimension|reference"/>
+    <!--刻度尺刻度的高度-->
+    <attr name="scaleViewScaleHeight" format="dimension|reference"/>
+
+    <declare-styleable name="ScrollScaleView">
+        <!--刻度尺在屏幕上显示的宽度-->
+        <!--<attr name="scaleViewWidth"/>-->
+        <!--刻度尺的总长度-->
+        <attr name="scaleViewLenth"/>
+        <!--刻度尺刻度宽度-->
+        <attr name="scaleViewScaleWidth"/>
+        <!--刻度尺指针宽度-->
+        <attr name="scaleViewPointerWidth"/>
+        <!--刻度尺刻度颜色-->
+        <attr name="scaleViewScaleColor"/>
+        <!--刻度尺刻度数-->
+        <attr name="scaleViewScaleNum"/>
+        <!--刻度尺指针颜色-->
+        <attr name="scaleViewPointerColor"/>
+        <!--刻度尺直线的颜色-->
+        <attr name="scaleViewLineColor"/>
+        <!--刻度尺直线的高度-->
+        <attr name="scaleViewLineHeight"/>
+        <!--刻度尺整个高度-->
+        <attr name="scaleViewHeight"/>
+        <!--刻度尺刻度的高度-->
+        <attr name="scaleViewScaleHeight"/>
+    </declare-styleable>
+</resources>
