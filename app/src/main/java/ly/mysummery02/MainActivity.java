@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements ScrollScaleView.O
     private void initData() {
 //        scrollScaleView.setScaleViewLenth(800);
 //        scrollScaleView.setPartNum(10);
+//        scrollScaleView.setInitPos(200);
         scaleViewWidth = (int) scrollScaleView.getScaleViewWidth();
         scrollScaleView.setListener(this);
         btnReset.setOnClickListener(this);

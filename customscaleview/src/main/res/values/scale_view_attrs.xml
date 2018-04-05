@@ -22,6 +22,8 @@
     <attr name="scaleViewHeight" format="dimension|reference"/>
     <!--刻度尺刻度的高度-->
     <attr name="scaleViewScaleHeight" format="dimension|reference"/>
+    <!--刻度尺指针初始化位置-->
+    <attr name="scaleViewInitPos" format="integer|reference"/>
 
     <declare-styleable name="ScrollScaleView">
         <!--刻度尺在屏幕上显示的宽度-->
@@ -46,5 +48,7 @@
         <attr name="scaleViewHeight"/>
         <!--刻度尺刻度的高度-->
         <attr name="scaleViewScaleHeight"/>
+        <!--刻度尺指针初始化位置-->
+        <attr name="scaleViewInitPos"/>
     </declare-styleable>
 </resources>

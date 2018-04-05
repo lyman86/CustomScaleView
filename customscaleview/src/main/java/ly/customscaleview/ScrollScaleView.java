@@ -78,6 +78,14 @@ public class ScrollScaleView extends View {
      * 刻度尺直线的颜色
      */
     private int scaleViewLineColor = Color.RED;
+    /**
+     * 默认没有初始化
+     */
+    private boolean init = false;
+    /**
+     * 刻度尺指针初始化位置（默认位置为0）
+     */
+    private int scaleViewInitPos = 0;
 
     private OnDataChangedListener listener;
 
@@ -99,6 +107,7 @@ public class ScrollScaleView extends View {
     private void initAttrs(TypedArray ta) {
 //        scaleViewWidth = ta.getDimension(R.styleable.ScrollScaleView_scaleViewWidth, ScaleViewDensityUtils.dp2px(getContext(), 300));
         scaleViewLenth = ta.getInt(R.styleable.ScrollScaleView_scaleViewLenth, 1000);
+        scaleViewInitPos = ta.getInt(R.styleable.ScrollScaleView_scaleViewInitPos, 0);
         scaleViewPointerWidth = ta.getDimension(R.styleable.ScrollScaleView_scaleViewPointerWidth, ScaleViewDensityUtils.dp2px(getContext(), 4));
         scaleViewScaleWidth = ta.getDimension(R.styleable.ScrollScaleView_scaleViewScaleWidth, ScaleViewDensityUtils.dp2px(getContext(), 2));
         scaleViewScaleColor = ta.getColor(R.styleable.ScrollScaleView_scaleViewScaleColor, Color.RED);
@@ -158,11 +167,11 @@ public class ScrollScaleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (deltaX < -(scaleViewLenth - scaleViewWidth / 2)) {
-            deltaX = (int) -(scaleViewLenth - scaleViewWidth / 2);
+            deltaX = -(scaleViewLenth - scaleViewWidth / 2);
         }
 
         if (deltaX > scaleViewWidth / 2) {
-            deltaX = (int) (scaleViewWidth / 2);
+            deltaX = scaleViewWidth / 2;
         }
 
         if (deltaX < 0) {
@@ -179,11 +188,16 @@ public class ScrollScaleView extends View {
         }
 
         if (listener != null) {
+            if (!init){
+                setDeltaX(scaleViewWidth/2 - scaleViewInitPos);
+                listener.onDataChanged(scaleViewInitPos);
+                return;
+            }
             int data = deltaX;
             if (data < 0) {
-                data = (int) -(data - scaleViewWidth / 2);
+                data = -(data - scaleViewWidth / 2);
             } else {
-                data = (int) (scaleViewWidth / 2 - data);
+                data = scaleViewWidth / 2 - data;
             }
             listener.onDataChanged(data);
         }
@@ -193,6 +207,7 @@ public class ScrollScaleView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
+                init = true;
                 downX = (int) event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -235,6 +250,15 @@ public class ScrollScaleView extends View {
 
     public float getScaleViewWidth() {
         return scaleViewWidth;
+    }
+
+    /**
+     * 设置初始化位置
+     * @param pos
+     */
+    public void setInitPos(int pos){
+        scaleViewInitPos = pos;
+        postInvalidate();
     }
 
     public int getScaleViewLenth() {
