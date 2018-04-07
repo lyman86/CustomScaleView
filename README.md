@@ -15,7 +15,7 @@ compile 'com.github.lyman86:CustomScaleView:v1.0.0'
 <br>
 2.整个刻度尺的长度：lyman:scaleViewLenth="2000"
 <br>
-3.刻度尺的刻度数目，如刻度尺的长度为2000，刻度数目为20，则每个刻度之间的距离为100：
+3.刻度尺的刻度数目，如刻度尺的长度为2000，刻度数目为20，则每个刻度之间的距离为100：lyman:scaleViewScaleNum="10"
 <br>
 4.刻度尺长直线的高度：lyman:scaleViewLineHeight="2dp"
 <br>
