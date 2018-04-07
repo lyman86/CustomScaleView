@@ -18,10 +18,10 @@
 
     <ly.customscaleview.ScrollScaleView
         android:id="@+id/scrollScaleView"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         lyman:scaleViewHeight="36dp"
-        lyman:scaleViewLenth="1000"
+        lyman:scaleViewLenth="2000"
         lyman:scaleViewScaleNum="10"
         lyman:scaleViewLineColor="@color/colorPrimary"
 
@@ -31,8 +31,7 @@
 
         lyman:scaleViewPointerColor="@color/scroll_scaleView_green"
         lyman:scaleViewPointerWidth="4dp"
-
-        lyman:scaleViewInitPos="100"
+        lyman:scaleViewInitPos="200"
         />
 
     <EditText

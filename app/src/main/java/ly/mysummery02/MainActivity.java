@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements ScrollScaleView.O
 //        scrollScaleView.setScaleViewLenth(800);
 //        scrollScaleView.setPartNum(10);
 //        scrollScaleView.setInitPos(200);
-        scaleViewWidth = (int) scrollScaleView.getScaleViewWidth();
         scrollScaleView.setListener(this);
         btnReset.setOnClickListener(this);
     }
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements ScrollScaleView.O
                 if (!TextUtils.isEmpty(numStr)){
                     num = Integer.parseInt(numStr);
                 }
-                scrollScaleView.setDeltaX(scaleViewWidth/2 - num);
+                scrollScaleView.setDeltaX((int) (scrollScaleView.getScaleViewWidth()/2 - num));
                 break;
         }
     }
