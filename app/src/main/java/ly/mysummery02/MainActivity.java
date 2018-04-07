@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements ScrollScaleView.O
                 if (!TextUtils.isEmpty(numStr)){
                     num = Integer.parseInt(numStr);
                 }
-                scrollScaleView.setDeltaX((int) (scrollScaleView.getScaleViewWidth()/2 - num));
+                scrollScaleView.setDataFromInput(num);
                 break;
         }
     }

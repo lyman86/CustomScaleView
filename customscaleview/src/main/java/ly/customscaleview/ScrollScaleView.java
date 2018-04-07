@@ -117,7 +117,6 @@ public class ScrollScaleView extends View {
         scaleViewHeight = ta.getDimension(R.styleable.ScrollScaleView_scaleViewHeight, ScaleViewDensityUtils.dp2px(getContext(), 26));
         scaleViewLineHeight = ta.getDimension(R.styleable.ScrollScaleView_scaleViewLineHeight, ScaleViewDensityUtils.dp2px(getContext(), 2));
         scaleViewScaleHeight = ta.getDimension(R.styleable.ScrollScaleView_scaleViewScaleHeight, ScaleViewDensityUtils.dp2px(getContext(), 5));
-        initData();
         initPaint();
     }
 
@@ -125,14 +124,10 @@ public class ScrollScaleView extends View {
         this.listener = listener;
     }
 
+
+
     public interface OnDataChangedListener {
         void onDataChanged(int data);
-    }
-
-    private void initData() {
-//        WindowManager wm = (WindowManager) getContext()
-//                .getSystemService(Context.WINDOW_SERVICE);
-//        screenWidth = wm.getDefaultDisplay().getWidth();
     }
 
     private void initPaint() {
@@ -259,6 +254,14 @@ public class ScrollScaleView extends View {
     public void setInitPos(int pos){
         scaleViewInitPos = pos;
         postInvalidate();
+    }
+    /**
+     * 手动输入确定位置
+     * @param num
+     */
+    public void setDataFromInput(int num) {
+        init = true;
+        setDeltaX((scaleViewWidth/2 - num));
     }
 
     public int getScaleViewLenth() {

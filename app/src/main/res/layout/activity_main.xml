@@ -31,7 +31,7 @@
 
         lyman:scaleViewPointerColor="@color/scroll_scaleView_green"
         lyman:scaleViewPointerWidth="4dp"
-        lyman:scaleViewInitPos="200"
+        lyman:scaleViewInitPos="100"
         />
 
     <EditText
